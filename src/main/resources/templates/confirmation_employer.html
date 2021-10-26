@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymleaf/layout"
+      layout:decorator="template">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="webjars\bootstrap\4.1.3\css\bootstrap.min.css">
+</head>
+
+<body>
+<div layout:fragment="pagecontent">
+  <div class="container">
+    <div class="card">
+      <div class="card-header"> Enregistrement éffectué</div>
+      <div class="card-body">
+        <div class="form-group"><label>ID</label>
+          <strong> <label  th:text="${p.id}"></label></strong>
+        </div>
+        <div class="form-group">
+          <label>NOM</label>
+          <label th:text="${p.nom}"></label>
+        </div>
+        <div class="form-group">
+          <label>PRENOM</label>
+          <label th:text="${p.prenom}"></label>
+        </div>
+        <div class="form-group">
+          <label>numero CIN </label>
+          <label th:text="${p.n_CIN}"></label>
+        </div>
+        <div class="form-group">
+          <label>Departement</label>
+          <label th:text="${p.departement.designation}"></label>
+        </div>
+        <div class="form-group">
+          <label>Salaire</label>
+          <label th:text="${p.sal_Reel}"></label>
+        </div>
+        <div class="form-group">
+          <label>numero d'affiliation</label>
+          <label th:text="${p.n_Num_Affilie}"></label>
+        </div>
+        <div class="form-group">
+          <label>numero d'assurance</label>
+          <label th:text="${p.n_Num_Assure}"></label>
+        </div>
+        <div class="form-group">
+          <label>congé disponnible </label>
+          <label th:text="${p.nbr_conge}"></label>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

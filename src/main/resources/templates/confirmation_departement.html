@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymleaf/layout"
+      layout:decorator="template">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="webjars\bootstrap\4.1.3\css\bootstrap.min.css">
+</head>
+
+<body>
+<div layout:fragment="pagecontent">
+    <div class="container">
+        <div class="card">
+            <div class="card-header"> Enregistrement éffectué</div>
+            <div class="card-body">
+                <div class="form-group"><label>ID :   ==></label>
+                    <strong> <label  th:text="${p.id}"></label></strong>
+                </div>
+                <div class="form-group">
+                    <label>désignation :   ==></label>
+                    <label th:text="${p.designation}"></label>
+                </div>
+                <div class="form-group">
+                    <label>nbr effectif :   ==></label>
+                    <label th:text="${p.nbrefctif}"></label>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
